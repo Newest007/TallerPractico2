@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ventasExpress
@@ -12,7 +14,7 @@ namespace ventasExpress
     {
         //Creamos la lista de la clase Usuario para almacenar todos los que ingresen
         private List<Usuario> Usuarios = new List<Usuario>();
-        private List<Usuario> registro = new List<Usuario>();
+        private List<UsuarioEncriptado> encriptado = new List<UsuarioEncriptado>(); //Aqui se guardarán los datos ya encriptados
 
         private void limpiar()
         {
@@ -23,6 +25,18 @@ namespace ventasExpress
         public Frmlogin()
         {
             InitializeComponent();
+            //Agregamos los datos a la lista "Usuarios"
+            Usuarios.Add(new Usuario { Cuenta = "admin", Contraseña = "admin123" });
+            Usuarios.Add(new Usuario { Cuenta = "vendedor", Contraseña = "Vendedor123" });
+            Usuarios.Add(new Usuario { Cuenta = "Invitado", Contraseña = "invitadoinvitado123" });
+
+            //Procedemos a encriptar los datos a travez de un ciclo 
+
+            foreach (Usuario a in Usuarios)
+            {
+                //Guardamos los datos ya encriptados en su correspondiente lista
+                encriptado.Add(new UsuarioEncriptado {Usuarioencript = a.Cuenta, Contraencript = Encriptacion.Codificar(a.Contraseña)});
+            }
         }
 
         private void Frmlogin_Load(object sender, EventArgs e)
