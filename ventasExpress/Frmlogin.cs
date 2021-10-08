@@ -59,11 +59,12 @@ namespace ventasExpress
                     string descodi = Encriptacion.Descodificar(enc.Contraencript);
                     if (enc.Usuarioencript == txtloginusuario.Text && descodi == txtlogincontra.Text)
                     {
+                        //Mensaje cuando el usuario es validado 
                         MessageBox.Show("Bienvenido " + enc.Usuarioencript + " ");
                     }
                 }
                 MessageBox.Show("Error, Usuario o Contraseña incorrectos", "Error de inicio de sesión" );
-                limpiar();
+                limpiar(); //Limpiamos los textbox y dejamos ya listo para escribir en el espacio para el usuario
             }
         }
     }
