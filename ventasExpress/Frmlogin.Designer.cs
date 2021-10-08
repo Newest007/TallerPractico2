@@ -36,7 +36,6 @@
             this.txtlogincontra = new System.Windows.Forms.TextBox();
             this.txtloginusuario = new System.Windows.Forms.TextBox();
             this.btnacceder = new System.Windows.Forms.Button();
-            this.btncrearcuenta = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -99,22 +98,13 @@
             // 
             // btnacceder
             // 
-            this.btnacceder.Location = new System.Drawing.Point(135, 227);
+            this.btnacceder.Location = new System.Drawing.Point(229, 210);
             this.btnacceder.Name = "btnacceder";
             this.btnacceder.Size = new System.Drawing.Size(100, 38);
             this.btnacceder.TabIndex = 7;
-            this.btnacceder.Text = "Acceder a cuenta";
+            this.btnacceder.Text = "Iniciar sesión";
             this.btnacceder.UseVisualStyleBackColor = true;
-            // 
-            // btncrearcuenta
-            // 
-            this.btncrearcuenta.Location = new System.Drawing.Point(252, 227);
-            this.btncrearcuenta.Name = "btncrearcuenta";
-            this.btncrearcuenta.Size = new System.Drawing.Size(100, 38);
-            this.btncrearcuenta.TabIndex = 8;
-            this.btncrearcuenta.Text = "Crear cuenta";
-            this.btncrearcuenta.UseVisualStyleBackColor = true;
-            this.btncrearcuenta.Click += new System.EventHandler(this.btncrearcuenta_Click);
+            this.btnacceder.Click += new System.EventHandler(this.btnacceder_Click);
             // 
             // label4
             // 
@@ -131,7 +121,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(490, 289);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btncrearcuenta);
             this.Controls.Add(this.btnacceder);
             this.Controls.Add(this.txtloginusuario);
             this.Controls.Add(this.txtlogincontra);
@@ -151,7 +140,6 @@
             this.Controls.SetChildIndex(this.txtlogincontra, 0);
             this.Controls.SetChildIndex(this.txtloginusuario, 0);
             this.Controls.SetChildIndex(this.btnacceder, 0);
-            this.Controls.SetChildIndex(this.btncrearcuenta, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -167,7 +155,6 @@
         private System.Windows.Forms.TextBox txtlogincontra;
         private System.Windows.Forms.TextBox txtloginusuario;
         private System.Windows.Forms.Button btnacceder;
-        private System.Windows.Forms.Button btncrearcuenta;
         private System.Windows.Forms.Label label4;
     }
 }

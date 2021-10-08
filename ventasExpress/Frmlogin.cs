@@ -20,6 +20,7 @@ namespace ventasExpress
         {
             txtlogincontra.Clear();
             txtloginusuario.Clear();
+            txtloginusuario.Focus();
         }
 
         public Frmlogin()
@@ -44,27 +45,26 @@ namespace ventasExpress
 
         }
 
-        private void btncrearcuenta_Click(object sender, EventArgs e)
+        private void btnacceder_Click(object sender, EventArgs e)
         {
-            //Creamos un objeto para que guarde las propiedades (usuario y contraseña)
-            Usuario user = new Usuario();
-            //Usuario registro = new Usuario();
-            
-            user.Cuenta = txtloginusuario.Text;
-            user.Contraseña = txtlogincontra.Text;
-
-            for (int i = 0; i < Usuarios.Count; i++)
+            //validamos que los text box no estén vacios
+            if (txtloginusuario.Text == "" || txtlogincontra.Text == "")
             {
-                if (Usuarios[i].Cuenta == user.Cuenta)
-                {
-                    MessageBox.Show("Este usuario ya está registrado");
-                }
-                else
-                {
-                    Usuarios.Add(user);
-                }
+                MessageBox.Show("Por favor digite sus credenciales para iniciar sesión", "Error");
             }
-            limpiar();
+            else
+            {
+                foreach (UsuarioEncriptado enc in encriptado)
+                {
+                    string descodi = Encriptacion.Descodificar(enc.Contraencript);
+                    if (enc.Usuarioencript == txtloginusuario.Text && descodi == txtlogincontra.Text)
+                    {
+                        MessageBox.Show("Bienvenido " + enc.Usuarioencript + " ");
+                    }
+                }
+                MessageBox.Show("Error, Usuario o Contraseña incorrectos", "Error de inicio de sesión" );
+                limpiar();
+            }
         }
     }
 }
