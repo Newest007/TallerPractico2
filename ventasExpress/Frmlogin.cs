@@ -45,7 +45,10 @@ namespace ventasExpress
 
         }
 
-        private void btnacceder_Click(object sender, EventArgs e)
+
+        public string usuario;
+
+        public void btnacceder_Click(object sender, EventArgs e)
         {
             //validamos que los text box no estén vacios
             if (txtloginusuario.Text == "" || txtlogincontra.Text == "" )
@@ -65,11 +68,13 @@ namespace ventasExpress
                         this.Hide();
                         menu.Show();
 
+                        usuario = enc.Usuarioencript;
                     }
-                    
+
                 }
 
-                MessageBox.Show("Error, Usuario o Contraseña incorrectos", "Error de inicio de sesión");
+                //MessageBox.Show("Error, Usuario o Contraseña incorrectos", "Error de inicio de sesión");
+                
                 limpiar(); //Limpiamos los textbox y dejamos ya listo para escribir en el espacio para el usuario
 
             }

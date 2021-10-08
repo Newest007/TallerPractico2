@@ -33,9 +33,10 @@
             // 
             // btnsalir
             // 
-            this.btnsalir.Location = new System.Drawing.Point(392, 242);
+            this.btnsalir.Location = new System.Drawing.Point(418, 209);
+            this.btnsalir.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(75, 23);
+            this.btnsalir.Size = new System.Drawing.Size(125, 46);
             this.btnsalir.TabIndex = 0;
             this.btnsalir.Text = "Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
@@ -43,12 +44,15 @@
             // 
             // FrmBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 289);
+            this.ClientSize = new System.Drawing.Size(634, 312);
             this.Controls.Add(this.btnsalir);
+            this.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "FrmBase";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmBase_Load);
             this.ResumeLayout(false);
 
         }

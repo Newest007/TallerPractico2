@@ -17,9 +17,15 @@ namespace ventasExpress
             InitializeComponent();
         }
 
+
         private void btnsalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void FrmBase_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
