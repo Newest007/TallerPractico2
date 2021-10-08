@@ -75,6 +75,7 @@
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Consultstorage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -83,7 +84,7 @@
             // 
             // btnsalir
             // 
-            this.btnsalir.Location = new System.Drawing.Point(632, 556);
+            this.btnsalir.Location = new System.Drawing.Point(632, 590);
             this.btnsalir.Margin = new System.Windows.Forms.Padding(8, 12, 8, 12);
             this.btnsalir.Size = new System.Drawing.Size(85, 46);
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
@@ -92,7 +93,7 @@
             // 
             this.tabControl1.Controls.Add(this.NuevaVenta);
             this.tabControl1.Controls.Add(this.Consultstorage);
-            this.tabControl1.Location = new System.Drawing.Point(14, 21);
+            this.tabControl1.Location = new System.Drawing.Point(10, 53);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -111,7 +112,7 @@
             this.Consultstorage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Consultstorage.Name = "Consultstorage";
             this.Consultstorage.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.Consultstorage.Size = new System.Drawing.Size(601, 375);
+            this.Consultstorage.Size = new System.Drawing.Size(601, 548);
             this.Consultstorage.TabIndex = 1;
             this.Consultstorage.Text = "Consultar inventarios";
             this.Consultstorage.UseVisualStyleBackColor = true;
@@ -120,7 +121,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 129);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 163);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(523, 192);
@@ -128,7 +129,7 @@
             // 
             // txtconsult
             // 
-            this.txtconsult.Location = new System.Drawing.Point(221, 81);
+            this.txtconsult.Location = new System.Drawing.Point(222, 115);
             this.txtconsult.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtconsult.Name = "txtconsult";
             this.txtconsult.Size = new System.Drawing.Size(147, 34);
@@ -148,7 +149,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 84);
+            this.label2.Location = new System.Drawing.Point(69, 118);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 26);
@@ -158,7 +159,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 32);
+            this.label1.Location = new System.Drawing.Point(39, 66);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(511, 26);
@@ -215,7 +216,7 @@
             // btnacceder
             // 
             this.btnacceder.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnacceder.Location = new System.Drawing.Point(400, 77);
+            this.btnacceder.Location = new System.Drawing.Point(401, 111);
             this.btnacceder.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnacceder.Name = "btnacceder";
             this.btnacceder.Size = new System.Drawing.Size(118, 40);
@@ -293,11 +294,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(178, 407);
+            this.label5.Location = new System.Drawing.Point(129, 407);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(256, 26);
+            this.label5.Size = new System.Drawing.Size(349, 26);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Introducir productos a comprar";
+            this.label5.Text = "Introduzca los productos que desea comprar";
             // 
             // label4
             // 
@@ -466,14 +467,14 @@
             this.label25.Location = new System.Drawing.Point(440, 21);
             this.label25.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(97, 26);
+            this.label25.Size = new System.Drawing.Size(102, 26);
             this.label25.TabIndex = 3;
-            this.label25.Text = "Bienvenido:";
+            this.label25.Text = "Bienvenido!:";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(545, 21);
+            this.label26.Location = new System.Drawing.Point(536, 21);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(68, 26);
             this.label26.TabIndex = 5;
@@ -599,10 +600,21 @@
             this.label38.TabIndex = 48;
             this.label38.Text = "$3.25";
             // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(77, 21);
+            this.label39.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(167, 26);
+            this.label39.TabIndex = 6;
+            this.label39.Text = "¿Que desea realizar?";
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 26F);
-            this.ClientSize = new System.Drawing.Size(738, 623);
+            this.ClientSize = new System.Drawing.Size(738, 672);
+            this.Controls.Add(this.label39);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.tabControl1);
@@ -616,6 +628,7 @@
             this.Controls.SetChildIndex(this.btnsalir, 0);
             this.Controls.SetChildIndex(this.label25, 0);
             this.Controls.SetChildIndex(this.label26, 0);
+            this.Controls.SetChildIndex(this.label39, 0);
             this.tabControl1.ResumeLayout(false);
             this.Consultstorage.ResumeLayout(false);
             this.Consultstorage.PerformLayout();
@@ -676,5 +689,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label39;
     }
 }
