@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ventasExpress
 {
-    class UsuarioEncriptado //Esta clase guardará los datos ya encriptados
+    class Encriptado //Esta clase guardará los datos ya encriptados
     {
         protected string usuarioencript; //Aqui se almacenarán los usuarios ya encriptados
         protected string contraencript;  //Aquí se almacenarán las contraseñas ya encriptadas

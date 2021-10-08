@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ventasExpress
 {
-    class Usuario
+    class Datos
     {
         protected string cuenta; //Va a ser la variable que almacenará al usuario
         protected string contraseña;
