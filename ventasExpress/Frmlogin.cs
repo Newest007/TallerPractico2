@@ -48,6 +48,8 @@ namespace ventasExpress
 
         public string usuario;
 
+        
+
         public void btnacceder_Click(object sender, EventArgs e)
         {
             //validamos que los text box no estén vacios
@@ -69,6 +71,9 @@ namespace ventasExpress
                         menu.Show();
 
                         usuario = enc.Usuarioencript;
+
+                        menu.label26.Text = usuario;
+
                     }
 
                 }

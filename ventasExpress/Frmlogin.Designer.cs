@@ -95,6 +95,7 @@
             this.txtlogincontra.Location = new System.Drawing.Point(211, 180);
             this.txtlogincontra.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtlogincontra.Name = "txtlogincontra";
+            this.txtlogincontra.PasswordChar = '*';
             this.txtlogincontra.Size = new System.Drawing.Size(137, 29);
             this.txtlogincontra.TabIndex = 5;
             // 
@@ -169,8 +170,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtlogincontra;
-        private System.Windows.Forms.TextBox txtloginusuario;
         private System.Windows.Forms.Button btnacceder;
         private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox txtloginusuario;
     }
 }
