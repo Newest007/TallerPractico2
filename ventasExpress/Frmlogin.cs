@@ -55,7 +55,7 @@ namespace ventasExpress
             //validamos que los text box no estén vacios
             if (txtloginusuario.Text == "" || txtlogincontra.Text == "" )
             {
-                MessageBox.Show("Por favor digite sus credenciales para iniciar sesión", "Error");
+                MessageBox.Show("Por favor digite sus credenciales para iniciar sesión", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
@@ -65,7 +65,7 @@ namespace ventasExpress
                     if (enc.Usuarioencript == txtloginusuario.Text && desencriptado == txtlogincontra.Text)
                     {
                         //Mensaje cuando el usuario es validado 
-                        MessageBox.Show("Bienvenido (" + enc.Usuarioencript + ") ");
+                        MessageBox.Show("Bienvenido al programa usuario " + enc.Usuarioencript + "! ","Sea Bienvenido",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         FrmMenu menu = new FrmMenu();
                         this.Hide();
                         menu.Show();

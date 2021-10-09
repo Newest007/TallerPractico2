@@ -58,7 +58,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btncomprar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtcomprar = new System.Windows.Forms.TextBox();
@@ -76,6 +76,9 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.NuevaVenta.SuspendLayout();
             this.Consultstorage.SuspendLayout();
@@ -97,11 +100,14 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(609, 587);
+            this.tabControl1.Size = new System.Drawing.Size(609, 643);
             this.tabControl1.TabIndex = 1;
             // 
             // NuevaVenta
             // 
+            this.NuevaVenta.Controls.Add(this.label42);
+            this.NuevaVenta.Controls.Add(this.label41);
+            this.NuevaVenta.Controls.Add(this.label40);
             this.NuevaVenta.Controls.Add(this.label38);
             this.NuevaVenta.Controls.Add(this.label37);
             this.NuevaVenta.Controls.Add(this.label36);
@@ -130,7 +136,7 @@
             this.NuevaVenta.Controls.Add(this.label10);
             this.NuevaVenta.Controls.Add(this.label9);
             this.NuevaVenta.Controls.Add(this.label8);
-            this.NuevaVenta.Controls.Add(this.button1);
+            this.NuevaVenta.Controls.Add(this.btncomprar);
             this.NuevaVenta.Controls.Add(this.label7);
             this.NuevaVenta.Controls.Add(this.label6);
             this.NuevaVenta.Controls.Add(this.txtcomprar);
@@ -142,7 +148,7 @@
             this.NuevaVenta.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.NuevaVenta.Name = "NuevaVenta";
             this.NuevaVenta.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.NuevaVenta.Size = new System.Drawing.Size(601, 548);
+            this.NuevaVenta.Size = new System.Drawing.Size(601, 604);
             this.NuevaVenta.TabIndex = 0;
             this.NuevaVenta.Text = "Venta nueva";
             this.NuevaVenta.UseVisualStyleBackColor = true;
@@ -428,14 +434,15 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Huevos";
             // 
-            // button1
+            // btncomprar
             // 
-            this.button1.Location = new System.Drawing.Point(249, 486);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 40);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Comprar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btncomprar.Location = new System.Drawing.Point(44, 363);
+            this.btncomprar.Name = "btncomprar";
+            this.btncomprar.Size = new System.Drawing.Size(103, 40);
+            this.btncomprar.TabIndex = 20;
+            this.btncomprar.Text = "Comprar";
+            this.btncomprar.UseVisualStyleBackColor = true;
+            this.btncomprar.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
@@ -459,7 +466,7 @@
             // 
             // txtcomprar
             // 
-            this.txtcomprar.Location = new System.Drawing.Point(200, 436);
+            this.txtcomprar.Location = new System.Drawing.Point(197, 471);
             this.txtcomprar.Name = "txtcomprar";
             this.txtcomprar.Size = new System.Drawing.Size(201, 34);
             this.txtcomprar.TabIndex = 17;
@@ -467,7 +474,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(129, 407);
+            this.label5.Location = new System.Drawing.Point(123, 432);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(349, 26);
             this.label5.TabIndex = 16;
@@ -535,6 +542,7 @@
             // 
             // Dgvproductos
             // 
+            this.Dgvproductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Dgvproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgvproductos.Location = new System.Drawing.Point(44, 163);
             this.Dgvproductos.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -603,17 +611,47 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(77, 21);
+            this.label39.Location = new System.Drawing.Point(62, 21);
             this.label39.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(167, 26);
             this.label39.TabIndex = 6;
             this.label39.Text = "¿Que desea realizar?";
             // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(103, 508);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(386, 23);
+            this.label40.TabIndex = 49;
+            this.label40.Text = "Se recomienda hacerlo de la siguiente manera: 1.,2,4.,3";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(99, 531);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(389, 23);
+            this.label41.TabIndex = 50;
+            this.label41.Text = "Donde \"1.\" es el producto y el \"2\" la cantidad a comprar";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(181, 554);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(230, 23);
+            this.label42.TabIndex = 51;
+            this.label42.Text = "siempre separados por una coma";
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 26F);
-            this.ClientSize = new System.Drawing.Size(738, 672);
+            this.ClientSize = new System.Drawing.Size(738, 711);
             this.Controls.Add(this.label39);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
@@ -654,7 +692,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btncomprar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtcomprar;
@@ -690,5 +728,8 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label40;
     }
 }
