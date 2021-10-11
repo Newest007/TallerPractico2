@@ -80,13 +80,12 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label44 = new System.Windows.Forms.Label();
+            this.DtgvFactura = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.NuevaVenta.SuspendLayout();
             this.Consultstorage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgvproductos)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgvFactura)).BeginInit();
             this.SuspendLayout();
             // 
             // btnsalir
@@ -109,7 +108,7 @@
             // 
             // NuevaVenta
             // 
-            this.NuevaVenta.Controls.Add(this.groupBox1);
+            this.NuevaVenta.Controls.Add(this.DtgvFactura);
             this.NuevaVenta.Controls.Add(this.label43);
             this.NuevaVenta.Controls.Add(this.label42);
             this.NuevaVenta.Controls.Add(this.label41);
@@ -567,7 +566,7 @@
             this.Consultstorage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Consultstorage.Name = "Consultstorage";
             this.Consultstorage.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.Consultstorage.Size = new System.Drawing.Size(601, 604);
+            this.Consultstorage.Size = new System.Drawing.Size(614, 604);
             this.Consultstorage.TabIndex = 1;
             this.Consultstorage.Text = "Consultar inventarios";
             this.Consultstorage.UseVisualStyleBackColor = true;
@@ -663,24 +662,13 @@
             this.label39.TabIndex = 6;
             this.label39.Text = "¿Que desea realizar?";
             // 
-            // groupBox1
+            // DtgvFactura
             // 
-            this.groupBox1.Controls.Add(this.label44);
-            this.groupBox1.Location = new System.Drawing.Point(382, 293);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(208, 136);
-            this.groupBox1.TabIndex = 53;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Factura";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(17, 39);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(68, 26);
-            this.label44.TabIndex = 0;
-            this.label44.Text = "label44";
+            this.DtgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgvFactura.Location = new System.Drawing.Point(268, 279);
+            this.DtgvFactura.Name = "DtgvFactura";
+            this.DtgvFactura.Size = new System.Drawing.Size(240, 150);
+            this.DtgvFactura.TabIndex = 53;
             // 
             // FrmMenu
             // 
@@ -707,8 +695,7 @@
             this.Consultstorage.ResumeLayout(false);
             this.Consultstorage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgvproductos)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgvFactura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -768,7 +755,6 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.DataGridView DtgvFactura;
     }
 }
