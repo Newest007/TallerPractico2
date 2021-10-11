@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ventasExpress
 {
-    class Ventas
+    public class Ventas
     {
         protected string codproduct;
         protected string nomproduct;
@@ -30,4 +30,49 @@ namespace ventasExpress
             set { cantproduct = value; }
         }
     }
+
+    class Factura
+    {
+
+        protected string tipoproducto;
+        protected int cantproducto;
+        protected double precioproduct;
+        protected double precioTXproducto;
+        protected double total;
+
+        public string TipoProducto
+        {
+            get { return tipoproducto; }
+            set { tipoproducto = value; }
+        }
+
+        public int xCantProducto
+        {
+            get { return cantproducto; }
+            set { cantproducto = value; }
+        }
+
+        public double PrecioProducto
+        {
+            get { return precioproduct; }
+            set { precioproduct = value; }
+        }
+
+        public double PrecioTXProducto
+        {
+            get { return precioTXproducto; }
+            set { precioTXproducto = value; }
+        }
+        
+        public double TotalFactura
+        {
+            get { return total; }
+            set { total = value; }
+        }
+
+        
+
+
+    }
+
 }

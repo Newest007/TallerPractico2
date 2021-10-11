@@ -11,9 +11,12 @@ namespace ventasExpress
 {
     public partial class FrmMenu : ventasExpress.FrmBase
     {
-        private List<Ventas> Productos = new List<Ventas>(); //Esta será la lista en la que estarán los productos
+        public List<Ventas> Productos = new List<Ventas>(); //Esta será la lista en la que estarán los productos
         DataTable ListaProductos = new DataTable();
         //Creamos una data table para poder mostrar la lista en el DataGriedView
+
+        private List<Factura> Facturas = new List<Factura>();
+        DataTable ListaFacturas = new DataTable();
 
         private void LlenarGrid(List<Ventas> Productos) //Este procedimiento se encargará de poner los datos del DataTable al DGV
         {
@@ -24,6 +27,19 @@ namespace ventasExpress
             }
             Dgvproductos.DataSource = null;
             Dgvproductos.DataSource = ListaProductos;
+
+        }
+
+        private void LlenarGrid2(List<Factura> Facturas)
+        {
+
+            ListaFacturas.Rows.Clear();
+            foreach(Factura v in Facturas)
+            {
+                ListaFacturas.Rows.Add(v.TipoProducto, v.xCantProducto, v.PrecioProducto, v.PrecioTXProducto, v.TotalFactura);
+            }
+
+
         }
 
         public FrmMenu()
@@ -51,6 +67,9 @@ namespace ventasExpress
             //LlenarGrid(Productos);
 
         }
+
+
+
 
         private void tabPage2_Click(object sender, EventArgs e)
         {
@@ -127,120 +146,143 @@ namespace ventasExpress
             ventatotal = 0;
             producto = 1;
 
-            for (int x = 0; x < valores.Length; x++)
+
+            try
             {
 
-                //Tipo de Producto
-                if (valores[x] == "1.")
+                for (int x = 0; x < valores.Length; x++)
                 {
-                    producto = 0.10;
+
+                    //Tipo de Producto
+                    if (valores[x] == "1.")
+                    {
+                        producto = 0.10;
+                        Facturas.Add(new Factura { TipoProducto = "Huevos"});
+                    }
+
+                    if (valores[x] == "2.")
+                    {
+                        producto = 5.00;
+                    }
+
+                    if (valores[x] == "3.")
+                    {
+                        producto = 3.00;
+                    }
+
+                    if (valores[x] == "4.")
+                    {
+                        producto = 0.50;
+                    }
+
+                    if (valores[x] == "5.")
+                    {
+                        producto = 0.80;
+                    }
+
+                    if (valores[x] == "6.")
+                    {
+                        producto = 0.30;
+                    }
+
+                    if (valores[x] == "7.")
+                    {
+                        producto = 2.25;
+                    }
+
+                    if (valores[x] == "8.")
+                    {
+                        producto = 2.75;
+                    }
+
+                    if (valores[x] == "9.")
+                    {
+                        producto = 1.80;
+                    }
+
+                    if (valores[x] == "10.")
+                    {
+                        producto = 3.25;
+                    }
+
+                    //NumeroProductos
+                    if (valores[x] == "1")
+                    {
+                        ventatotal = ventatotal + (producto * 1);
+                    }
+
+                    if (valores[x] == "2")
+                    {
+                        ventatotal = ventatotal + (producto * 2);
+                    }
+
+                    if (valores[x] == "3")
+                    {
+                        ventatotal = ventatotal + (producto * 3);
+                    }
+
+                    if (valores[x] == "4")
+                    {
+                        ventatotal = ventatotal + (producto * 4);
+                    }
+
+                    if (valores[x] == "5")
+                    {
+                        ventatotal = ventatotal + (producto * 5);
+                    }
+
+                    if (valores[x] == "6")
+                    {
+                        ventatotal = ventatotal + (producto * 6);
+                    }
+
+                    if (valores[x] == "7")
+                    {
+                        ventatotal = ventatotal + (producto * 7);
+                    }
+
+                    if (valores[x] == "8")
+                    {
+                        ventatotal = ventatotal + (producto * 8);
+                    }
+
+                    if (valores[x] == "9")
+                    {
+                        ventatotal = ventatotal + (producto * 9);
+                    }
+
+                    if (valores[x] == "10")
+                    {
+                        ventatotal = ventatotal + (producto * 10);
+                    }
+
+                    if (valores[x] == "")
+                    {
+                        MessageBox.Show("Es necesario ingresar su compra", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
 
-                if (valores[x] == "2.")
-                {
-                    producto = 5.00;
-                }
-
-                if (valores[x] == "3.")
-                {
-                    producto = 3.00;
-                }
-
-                if (valores[x] == "4.")
-                {
-                    producto = 0.50;
-                }
-
-                if (valores[x] == "5.")
-                {
-                    producto = 0.80;
-                }
-
-                if (valores[x] == "6.")
-                {
-                    producto = 0.30;
-                }
-
-                if (valores[x] == "7.")
-                {
-                    producto = 2.25;
-                }
-
-                if (valores[x] == "8.")
-                {
-                    producto = 2.75;
-                }
-
-                if (valores[x] == "9.")
-                {
-                    producto = 1.80;
-                }
-
-                if (valores[x] == "10.")
-                {
-                    producto = 3.25;
-                }
-
-                //NumeroProductos
-                if (valores[x] == "1")
-                {
-                    ventatotal = ventatotal + (producto * 1);
-                }
-
-                if (valores[x] == "2")
-                {
-                    ventatotal = ventatotal + (producto * 2);
-                }
-
-                if (valores[x] == "3")
-                {
-                    ventatotal = ventatotal + (producto * 3);
-                }
-
-                if (valores[x] == "4")
-                {
-                    ventatotal = ventatotal + (producto * 4);
-                }
-
-                if (valores[x] == "5")
-                {
-                    ventatotal = ventatotal + (producto * 5);
-                }
-
-                if (valores[x] == "6")
-                {
-                    ventatotal = ventatotal + (producto * 6);
-                }
-
-                if (valores[x] == "7")
-                {
-                    ventatotal = ventatotal + (producto * 7);
-                }
-
-                if (valores[x] == "8")
-                {
-                    ventatotal = ventatotal + (producto * 8);
-                }
-
-                if (valores[x] == "9")
-                {
-                    ventatotal = ventatotal + (producto * 9);
-                }
-
-                if (valores[x] == "10")
-                {
-                    ventatotal = ventatotal + (producto * 10);
-                }
-
-                if (valores[x] == "")
-                {
-                    MessageBox.Show("Es necesario ingresar su compra", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                
             }
 
-            //label11.Text = Convert.ToString(ventatotal);
+            catch (OverflowException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            catch(Exception ex)
+            {
+                MessageBox.Show("Debe de introducir los datos tal y como se aconsejan"+ ex.Message);
+            }
+
+            label43.Text = Convert.ToString(ventatotal);
 
             escritor.Close();
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

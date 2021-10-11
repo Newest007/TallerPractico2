@@ -30,6 +30,10 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.NuevaVenta = new System.Windows.Forms.TabPage();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
@@ -76,18 +80,18 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label44 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.NuevaVenta.SuspendLayout();
             this.Consultstorage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgvproductos)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnsalir
             // 
-            this.btnsalir.Location = new System.Drawing.Point(632, 590);
+            this.btnsalir.Location = new System.Drawing.Point(641, 574);
             this.btnsalir.Margin = new System.Windows.Forms.Padding(8, 12, 8, 12);
             this.btnsalir.Size = new System.Drawing.Size(85, 46);
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
@@ -100,11 +104,13 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(609, 643);
+            this.tabControl1.Size = new System.Drawing.Size(622, 643);
             this.tabControl1.TabIndex = 1;
             // 
             // NuevaVenta
             // 
+            this.NuevaVenta.Controls.Add(this.groupBox1);
+            this.NuevaVenta.Controls.Add(this.label43);
             this.NuevaVenta.Controls.Add(this.label42);
             this.NuevaVenta.Controls.Add(this.label41);
             this.NuevaVenta.Controls.Add(this.label40);
@@ -148,10 +154,49 @@
             this.NuevaVenta.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.NuevaVenta.Name = "NuevaVenta";
             this.NuevaVenta.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.NuevaVenta.Size = new System.Drawing.Size(601, 604);
+            this.NuevaVenta.Size = new System.Drawing.Size(614, 604);
             this.NuevaVenta.TabIndex = 0;
             this.NuevaVenta.Text = "Venta nueva";
             this.NuevaVenta.UseVisualStyleBackColor = true;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(54, 463);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(68, 26);
+            this.label43.TabIndex = 52;
+            this.label43.Text = "label43";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(181, 565);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(230, 23);
+            this.label42.TabIndex = 51;
+            this.label42.Text = "siempre separados por una coma";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(99, 542);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(389, 23);
+            this.label41.TabIndex = 50;
+            this.label41.Text = "Donde \"1.\" es el producto y el \"2\" la cantidad a comprar";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(103, 519);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(386, 23);
+            this.label40.TabIndex = 49;
+            this.label40.Text = "Se recomienda hacerlo de la siguiente manera: 1.,2,4.,3";
             // 
             // label38
             // 
@@ -522,7 +567,7 @@
             this.Consultstorage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Consultstorage.Name = "Consultstorage";
             this.Consultstorage.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.Consultstorage.Size = new System.Drawing.Size(601, 548);
+            this.Consultstorage.Size = new System.Drawing.Size(601, 604);
             this.Consultstorage.TabIndex = 1;
             this.Consultstorage.Text = "Consultar inventarios";
             this.Consultstorage.UseVisualStyleBackColor = true;
@@ -618,40 +663,29 @@
             this.label39.TabIndex = 6;
             this.label39.Text = "¿Que desea realizar?";
             // 
-            // label40
+            // groupBox1
             // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(103, 508);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(386, 23);
-            this.label40.TabIndex = 49;
-            this.label40.Text = "Se recomienda hacerlo de la siguiente manera: 1.,2,4.,3";
+            this.groupBox1.Controls.Add(this.label44);
+            this.groupBox1.Location = new System.Drawing.Point(382, 293);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(208, 136);
+            this.groupBox1.TabIndex = 53;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Factura";
             // 
-            // label41
+            // label44
             // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(99, 531);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(389, 23);
-            this.label41.TabIndex = 50;
-            this.label41.Text = "Donde \"1.\" es el producto y el \"2\" la cantidad a comprar";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(181, 554);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(230, 23);
-            this.label42.TabIndex = 51;
-            this.label42.Text = "siempre separados por una coma";
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(17, 39);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(68, 26);
+            this.label44.TabIndex = 0;
+            this.label44.Text = "label44";
             // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 26F);
-            this.ClientSize = new System.Drawing.Size(738, 711);
+            this.ClientSize = new System.Drawing.Size(745, 711);
             this.Controls.Add(this.label39);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
@@ -673,6 +707,8 @@
             this.Consultstorage.ResumeLayout(false);
             this.Consultstorage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgvproductos)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -731,5 +767,8 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label44;
     }
 }
