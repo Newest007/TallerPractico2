@@ -38,6 +38,8 @@ namespace ventasExpress
             {
                 ListaFacturas.Rows.Add(v.TipoProducto, v.xCantProducto, v.PrecioProducto, v.PrecioTXProducto, v.TotalFactura);
             }
+            DtgvFactura.DataSource = null;
+            DtgvFactura.DataSource = ListaFacturas;
 
 
         }
@@ -63,6 +65,11 @@ namespace ventasExpress
             ListaProductos.Columns.Add(new DataColumn("Nomproduct", typeof(string)));
             ListaProductos.Columns.Add(new DataColumn("Cantproduct", typeof(int)));
 
+            ListaFacturas.Columns.Add(new DataColumn("Tipo de Producto", typeof(string)));
+            ListaFacturas.Columns.Add(new DataColumn("Cantidad", typeof(int)));
+            ListaFacturas.Columns.Add(new DataColumn("Precio c/u ", typeof(double)));
+            ListaFacturas.Columns.Add(new DataColumn("Precio Total c/u", typeof(double)));
+            ListaFacturas.Columns.Add(new DataColumn("Total a Pagar", typeof(double)));
             //Mandamos la lista para que la muestre en el DGV
             //LlenarGrid(Productos);
 
@@ -146,6 +153,8 @@ namespace ventasExpress
             ventatotal = 0;
             producto = 1;
 
+            string tipoproducto;
+            tipoproducto = "";
 
             try
             {
@@ -157,103 +166,123 @@ namespace ventasExpress
                     if (valores[x] == "1.")
                     {
                         producto = 0.10;
-                        Facturas.Add(new Factura { TipoProducto = "Huevos"});
+                        tipoproducto = "Huevos";
+                        
                     }
 
                     if (valores[x] == "2.")
                     {
                         producto = 5.00;
+                        tipoproducto = "Pollo";
                     }
 
                     if (valores[x] == "3.")
                     {
                         producto = 3.00;
+                        tipoproducto = "Aceite";
                     }
 
                     if (valores[x] == "4.")
                     {
-                        producto = 0.50;
+                        producto = 0.50;                        
+                        tipoproducto = "Fósforos";
                     }
 
                     if (valores[x] == "5.")
                     {
-                        producto = 0.80;
+                        producto = 0.80;                        
+                        tipoproducto = "Dulces";
                     }
 
                     if (valores[x] == "6.")
                     {
-                        producto = 0.30;
+                        producto = 0.30;                        
+                        tipoproducto = "Margarina";
                     }
 
                     if (valores[x] == "7.")
                     {
-                        producto = 2.25;
+                        producto = 2.25;                        
+                        tipoproducto = "Jabón";
                     }
 
                     if (valores[x] == "8.")
                     {
-                        producto = 2.75;
+                        producto = 2.75;                        
+                        tipoproducto = "Carne";
                     }
 
                     if (valores[x] == "9.")
                     {
-                        producto = 1.80;
+                        producto = 1.80;                        
+                        tipoproducto = "Gaseosa";
                     }
 
                     if (valores[x] == "10.")
                     {
-                        producto = 3.25;
+                        producto = 3.25;                        
+                        tipoproducto = "Desechables";
                     }
 
                     //NumeroProductos
                     if (valores[x] == "1")
                     {
                         ventatotal = ventatotal + (producto * 1);
+                        Facturas.Add(new Factura { TipoProducto = tipoproducto, PrecioProducto = producto ,xCantProducto = 1, PrecioTXProducto = (producto * 1)});
                     }
 
                     if (valores[x] == "2")
                     {
                         ventatotal = ventatotal + (producto * 2);
+                        Facturas.Add(new Factura { TipoProducto = tipoproducto, PrecioProducto = producto ,xCantProducto = 2, PrecioTXProducto = (producto * 2)});
                     }
 
                     if (valores[x] == "3")
                     {
                         ventatotal = ventatotal + (producto * 3);
+                        Facturas.Add(new Factura { TipoProducto = tipoproducto, PrecioProducto = producto, xCantProducto = 3, PrecioTXProducto = (producto * 3)});
                     }
 
                     if (valores[x] == "4")
                     {
                         ventatotal = ventatotal + (producto * 4);
+                        Facturas.Add(new Factura { TipoProducto = tipoproducto, PrecioProducto = producto, xCantProducto = 4, PrecioTXProducto = (producto * 4)});
                     }
 
                     if (valores[x] == "5")
                     {
                         ventatotal = ventatotal + (producto * 5);
+                        Facturas.Add(new Factura { TipoProducto = tipoproducto, PrecioProducto = producto, xCantProducto = 5, PrecioTXProducto = (producto * 5)});
                     }
 
                     if (valores[x] == "6")
                     {
                         ventatotal = ventatotal + (producto * 6);
+                        Facturas.Add(new Factura {TipoProducto = tipoproducto, PrecioProducto = producto, xCantProducto = 6, PrecioTXProducto = (producto * 6)});
                     }
 
                     if (valores[x] == "7")
                     {
                         ventatotal = ventatotal + (producto * 7);
+                        Facturas.Add(new Factura { TipoProducto = tipoproducto, PrecioProducto = producto, xCantProducto = 7, PrecioTXProducto = (producto * 7)});
                     }
 
                     if (valores[x] == "8")
                     {
                         ventatotal = ventatotal + (producto * 8);
+                        Facturas.Add(new Factura { TipoProducto = tipoproducto, PrecioProducto = producto, xCantProducto = 8, PrecioTXProducto = (producto * 8)});
                     }
 
                     if (valores[x] == "9")
                     {
                         ventatotal = ventatotal + (producto * 9);
+                        Facturas.Add(new Factura { TipoProducto = tipoproducto, PrecioProducto = producto, xCantProducto = 9, PrecioTXProducto = (producto * 9)});
                     }
 
                     if (valores[x] == "10")
                     {
                         ventatotal = ventatotal + (producto * 10);
+                        Facturas.Add(new Factura { TipoProducto = tipoproducto, PrecioProducto = producto, xCantProducto = 10, PrecioTXProducto = (producto * 10)});
                     }
 
                     if (valores[x] == "")
@@ -276,6 +305,10 @@ namespace ventasExpress
             }
 
             label43.Text = Convert.ToString(ventatotal);
+            Facturas.Add(new Factura { TotalFactura = ventatotal });
+            LlenarGrid2(Facturas);
+
+            DtgvFactura.Visible = true;
 
             escritor.Close();
         }

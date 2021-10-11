@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.NuevaVenta = new System.Windows.Forms.TabPage();
+            this.DtgvFactura = new System.Windows.Forms.DataGridView();
             this.label43 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
@@ -80,12 +81,11 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.DtgvFactura = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.NuevaVenta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgvFactura)).BeginInit();
             this.Consultstorage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgvproductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DtgvFactura)).BeginInit();
             this.SuspendLayout();
             // 
             // btnsalir
@@ -157,6 +157,15 @@
             this.NuevaVenta.TabIndex = 0;
             this.NuevaVenta.Text = "Venta nueva";
             this.NuevaVenta.UseVisualStyleBackColor = true;
+            // 
+            // DtgvFactura
+            // 
+            this.DtgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgvFactura.Location = new System.Drawing.Point(-4, 219);
+            this.DtgvFactura.Name = "DtgvFactura";
+            this.DtgvFactura.Size = new System.Drawing.Size(622, 210);
+            this.DtgvFactura.TabIndex = 53;
+            this.DtgvFactura.Visible = false;
             // 
             // label43
             // 
@@ -662,14 +671,6 @@
             this.label39.TabIndex = 6;
             this.label39.Text = "¿Que desea realizar?";
             // 
-            // DtgvFactura
-            // 
-            this.DtgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtgvFactura.Location = new System.Drawing.Point(268, 279);
-            this.DtgvFactura.Name = "DtgvFactura";
-            this.DtgvFactura.Size = new System.Drawing.Size(240, 150);
-            this.DtgvFactura.TabIndex = 53;
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 26F);
@@ -692,10 +693,10 @@
             this.tabControl1.ResumeLayout(false);
             this.NuevaVenta.ResumeLayout(false);
             this.NuevaVenta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgvFactura)).EndInit();
             this.Consultstorage.ResumeLayout(false);
             this.Consultstorage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgvproductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DtgvFactura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
