@@ -297,7 +297,27 @@ namespace ventasExpress
                 if (ventatotal > 20)
                 {
                     ventatotal = ventatotal - (ventatotal * 0.03);
-                    MessageBox.Show("Se le ha aplicado un descuento del 3%, pase feliz día", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Se le ha aplicado un descuento del 3%, pase feliz día!", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+
+                if(txtcomprar.Text.Contains("2.,1"))
+                {
+                    if(txtcomprar.Text.Contains("9.,1"))
+                    {
+                        MessageBox.Show("Se le han añadido de manera gratuita una cantidad de 5 dulces, disfrutelos!", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Facturas.Add(new Factura { TipoProducto = "Dulces", xCantProducto = 5, PrecioProducto = 0.0, PrecioTXProducto = 0.0 });
+                    }
+
+                }
+
+                if (txtcomprar.Text.Contains("9.,1"))
+                {
+                    if (txtcomprar.Text.Contains("2.,1"))
+                    {
+                        MessageBox.Show("Se le han añadido de manera gratuita una cantidad de 5 dulces, disfrutelos!", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Facturas.Add(new Factura { TipoProducto = "Dulces", xCantProducto = 5, PrecioProducto = 0.0, PrecioTXProducto = 0.0 });
+                    }
+
                 }
 
             }
@@ -338,6 +358,8 @@ namespace ventasExpress
             gbxcomprar.Visible = true;
             btnnewcompra.Visible = false;
             DtgvFactura.Visible = false;
+
+            Facturas.Clear();
         }
     }
 }

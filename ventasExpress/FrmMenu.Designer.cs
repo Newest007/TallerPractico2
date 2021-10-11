@@ -30,11 +30,15 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.NuevaVenta = new System.Windows.Forms.TabPage();
-            this.DtgvFactura = new System.Windows.Forms.DataGridView();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
+            this.gbxcomprar = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtcomprar = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.btncomprar = new System.Windows.Forms.Button();
+            this.btnnewcompra = new System.Windows.Forms.Button();
+            this.DtgvFactura = new System.Windows.Forms.DataGridView();
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
@@ -63,11 +67,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btncomprar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtcomprar = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -81,14 +82,12 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.btnnewcompra = new System.Windows.Forms.Button();
-            this.gbxcomprar = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.NuevaVenta.SuspendLayout();
+            this.gbxcomprar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtgvFactura)).BeginInit();
             this.Consultstorage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgvproductos)).BeginInit();
-            this.gbxcomprar.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnsalir
@@ -114,7 +113,6 @@
             this.NuevaVenta.Controls.Add(this.gbxcomprar);
             this.NuevaVenta.Controls.Add(this.btnnewcompra);
             this.NuevaVenta.Controls.Add(this.DtgvFactura);
-            this.NuevaVenta.Controls.Add(this.label43);
             this.NuevaVenta.Controls.Add(this.label38);
             this.NuevaVenta.Controls.Add(this.label37);
             this.NuevaVenta.Controls.Add(this.label36);
@@ -157,45 +155,35 @@
             this.NuevaVenta.Text = "Venta nueva";
             this.NuevaVenta.UseVisualStyleBackColor = true;
             // 
-            // DtgvFactura
+            // gbxcomprar
             // 
-            this.DtgvFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DtgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtgvFactura.Location = new System.Drawing.Point(53, 370);
-            this.DtgvFactura.Name = "DtgvFactura";
-            this.DtgvFactura.Size = new System.Drawing.Size(612, 159);
-            this.DtgvFactura.TabIndex = 53;
-            this.DtgvFactura.Visible = false;
-            this.DtgvFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgvFactura_CellContentClick);
+            this.gbxcomprar.Controls.Add(this.label5);
+            this.gbxcomprar.Controls.Add(this.txtcomprar);
+            this.gbxcomprar.Controls.Add(this.label40);
+            this.gbxcomprar.Controls.Add(this.label41);
+            this.gbxcomprar.Controls.Add(this.label42);
+            this.gbxcomprar.Controls.Add(this.btncomprar);
+            this.gbxcomprar.Location = new System.Drawing.Point(70, 379);
+            this.gbxcomprar.Name = "gbxcomprar";
+            this.gbxcomprar.Size = new System.Drawing.Size(561, 182);
+            this.gbxcomprar.TabIndex = 55;
+            this.gbxcomprar.TabStop = false;
             // 
-            // label43
+            // label5
             // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(48, 119);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(68, 26);
-            this.label43.TabIndex = 52;
-            this.label43.Text = "label43";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(108, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(349, 26);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Introduzca los productos que desea comprar";
             // 
-            // label42
+            // txtcomprar
             // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(166, 136);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(230, 23);
-            this.label42.TabIndex = 51;
-            this.label42.Text = "siempre separados por una coma";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(88, 113);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(389, 23);
-            this.label41.TabIndex = 50;
-            this.label41.Text = "Donde \"1.\" es el producto y el \"2\" la cantidad a comprar";
+            this.txtcomprar.Location = new System.Drawing.Point(188, 53);
+            this.txtcomprar.Name = "txtcomprar";
+            this.txtcomprar.Size = new System.Drawing.Size(201, 34);
+            this.txtcomprar.TabIndex = 17;
             // 
             // label40
             // 
@@ -207,11 +195,63 @@
             this.label40.TabIndex = 49;
             this.label40.Text = "Se recomienda hacerlo de la siguiente manera: 1.,2,4.,3";
             // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(88, 113);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(389, 23);
+            this.label41.TabIndex = 50;
+            this.label41.Text = "Donde \"1.\" es el producto y el \"2\" la cantidad a comprar";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(166, 136);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(230, 23);
+            this.label42.TabIndex = 51;
+            this.label42.Text = "siempre separados por una coma";
+            // 
+            // btncomprar
+            // 
+            this.btncomprar.Location = new System.Drawing.Point(6, 17);
+            this.btncomprar.Name = "btncomprar";
+            this.btncomprar.Size = new System.Drawing.Size(93, 40);
+            this.btncomprar.TabIndex = 20;
+            this.btncomprar.Text = "Comprar";
+            this.btncomprar.UseVisualStyleBackColor = true;
+            this.btncomprar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnnewcompra
+            // 
+            this.btnnewcompra.Location = new System.Drawing.Point(248, 535);
+            this.btnnewcompra.Name = "btnnewcompra";
+            this.btnnewcompra.Size = new System.Drawing.Size(156, 40);
+            this.btnnewcompra.TabIndex = 54;
+            this.btnnewcompra.Text = "Nueva Compra";
+            this.btnnewcompra.UseVisualStyleBackColor = true;
+            this.btnnewcompra.Visible = false;
+            this.btnnewcompra.Click += new System.EventHandler(this.btnnewcompra_Click);
+            // 
+            // DtgvFactura
+            // 
+            this.DtgvFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DtgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgvFactura.Location = new System.Drawing.Point(53, 370);
+            this.DtgvFactura.Name = "DtgvFactura";
+            this.DtgvFactura.Size = new System.Drawing.Size(612, 159);
+            this.DtgvFactura.TabIndex = 53;
+            this.DtgvFactura.Visible = false;
+            this.DtgvFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgvFactura_CellContentClick);
+            // 
             // label38
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(377, 341);
+            this.label38.Location = new System.Drawing.Point(377, 337);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(57, 26);
             this.label38.TabIndex = 48;
@@ -221,7 +261,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(254, 341);
+            this.label37.Location = new System.Drawing.Point(254, 337);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(99, 26);
             this.label37.TabIndex = 47;
@@ -231,7 +271,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(192, 341);
+            this.label36.Location = new System.Drawing.Point(192, 337);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(38, 26);
             this.label36.TabIndex = 46;
@@ -488,16 +528,6 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Huevos";
             // 
-            // btncomprar
-            // 
-            this.btncomprar.Location = new System.Drawing.Point(6, 17);
-            this.btncomprar.Name = "btncomprar";
-            this.btncomprar.Size = new System.Drawing.Size(93, 40);
-            this.btncomprar.TabIndex = 20;
-            this.btncomprar.Text = "Comprar";
-            this.btncomprar.UseVisualStyleBackColor = true;
-            this.btncomprar.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -517,22 +547,6 @@
             this.label6.Size = new System.Drawing.Size(27, 26);
             this.label6.TabIndex = 18;
             this.label6.Text = "1.";
-            // 
-            // txtcomprar
-            // 
-            this.txtcomprar.Location = new System.Drawing.Point(188, 53);
-            this.txtcomprar.Name = "txtcomprar";
-            this.txtcomprar.Size = new System.Drawing.Size(201, 34);
-            this.txtcomprar.TabIndex = 17;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(108, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(349, 26);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Introduzca los productos que desea comprar";
             // 
             // label4
             // 
@@ -672,35 +686,10 @@
             this.label39.TabIndex = 6;
             this.label39.Text = "¿Que desea realizar?";
             // 
-            // btnnewcompra
-            // 
-            this.btnnewcompra.Location = new System.Drawing.Point(248, 535);
-            this.btnnewcompra.Name = "btnnewcompra";
-            this.btnnewcompra.Size = new System.Drawing.Size(156, 40);
-            this.btnnewcompra.TabIndex = 54;
-            this.btnnewcompra.Text = "Nueva Compra";
-            this.btnnewcompra.UseVisualStyleBackColor = true;
-            this.btnnewcompra.Visible = false;
-            this.btnnewcompra.Click += new System.EventHandler(this.btnnewcompra_Click);
-            // 
-            // gbxcomprar
-            // 
-            this.gbxcomprar.Controls.Add(this.label5);
-            this.gbxcomprar.Controls.Add(this.txtcomprar);
-            this.gbxcomprar.Controls.Add(this.label40);
-            this.gbxcomprar.Controls.Add(this.label41);
-            this.gbxcomprar.Controls.Add(this.label42);
-            this.gbxcomprar.Controls.Add(this.btncomprar);
-            this.gbxcomprar.Location = new System.Drawing.Point(70, 379);
-            this.gbxcomprar.Name = "gbxcomprar";
-            this.gbxcomprar.Size = new System.Drawing.Size(561, 182);
-            this.gbxcomprar.TabIndex = 55;
-            this.gbxcomprar.TabStop = false;
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 26F);
-            this.ClientSize = new System.Drawing.Size(745, 677);
+            this.ClientSize = new System.Drawing.Size(745, 716);
             this.Controls.Add(this.label39);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
@@ -719,12 +708,12 @@
             this.tabControl1.ResumeLayout(false);
             this.NuevaVenta.ResumeLayout(false);
             this.NuevaVenta.PerformLayout();
+            this.gbxcomprar.ResumeLayout(false);
+            this.gbxcomprar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtgvFactura)).EndInit();
             this.Consultstorage.ResumeLayout(false);
             this.Consultstorage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgvproductos)).EndInit();
-            this.gbxcomprar.ResumeLayout(false);
-            this.gbxcomprar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -783,7 +772,6 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label43;
         private System.Windows.Forms.DataGridView DtgvFactura;
         private System.Windows.Forms.GroupBox gbxcomprar;
         private System.Windows.Forms.Button btnnewcompra;
