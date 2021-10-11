@@ -287,11 +287,19 @@ namespace ventasExpress
 
                     if (valores[x] == "")
                     {
+                        ventatotal = 0;
                         MessageBox.Show("Es necesario ingresar su compra", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
 
+                MessageBox.Show("Imprimiendo su factura...", "Porfavor espere", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
+                if (ventatotal > 20)
+                {
+                    ventatotal = ventatotal - (ventatotal * 0.03);
+                    MessageBox.Show("Se le ha aplicado un descuento del 3%, pase feliz día", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+
             }
 
             catch (OverflowException ex)
@@ -304,11 +312,13 @@ namespace ventasExpress
                 MessageBox.Show("Debe de introducir los datos tal y como se aconsejan"+ ex.Message);
             }
 
-            label43.Text = Convert.ToString(ventatotal);
             Facturas.Add(new Factura { TotalFactura = ventatotal });
             LlenarGrid2(Facturas);
 
+            txtcomprar.Clear();
             DtgvFactura.Visible = true;
+            btnnewcompra.Visible = true;
+            gbxcomprar.Visible = false;
 
             escritor.Close();
         }
@@ -316,6 +326,18 @@ namespace ventasExpress
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void DtgvFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnnewcompra_Click(object sender, EventArgs e)
+        {
+            gbxcomprar.Visible = true;
+            btnnewcompra.Visible = false;
+            DtgvFactura.Visible = false;
         }
     }
 }
