@@ -357,16 +357,6 @@ namespace ventasExpress
 
         public void btnchagepassword_Click(object sender, EventArgs e)
         {
-            int pos = 0;
-            string desencriptado;
-            //MessageBox.Show("Las contraseñas coincides");
-            int[] numeros = new int[] { 1, 2, 3 };
-            foreach (Encriptado prueba in encriptado)
-            {
-                MessageBox.Show("LLega al froeach");
-                
-                
-            }
 
             //Definimos las variables en las que se depositará la contraseña actual y la nueva
             string actualpassword;
@@ -382,33 +372,46 @@ namespace ventasExpress
 
 
             //Creamos las soluciones para los casos que pueden ocurrir
-            if (txtactualpass.Text == "" || txtnewpassword.Text == "" || txtconfirmpassword.Text == "")
+            if (actualpassword == "" || newpassword == "" || confirmpassword == "")
             {
                 MessageBox.Show("Debe de llenar todos campos para poder cambiar su contraseña n/Intente de nuevo");
                 //limpiamos los espacios 
+                limpiarcampos();
             }
             else
             {
                 //Confirmamos que tanto la nueva contraseña como la coonfirmación de esta coincidad
-                if (txtnewpassword.Text == txtconfirmpassword.Text)
+                if (newpassword == confirmpassword)
                 {
-
-
-                    /*int pos = 0;
-                    string desencriptado;
-                    //MessageBox.Show("Las contraseñas coincides");
-                    foreach (Datos dat in data)
+                    foreach (Encriptado encrip in encriptado)
                     {
-                        MessageBox.Show(dat.Cuenta);
-                        MessageBox.Show("LLega al froeach");
-                    }*/
+                        string contradesencrit = Seguridad.DesEncriptar(encrip.Contraencript);
+                        //Aqui le decimos la programa que busca en la lista hasta que el usu
+                        if (encrip.Usuarioencript == label26.Text)
+                        {
+                            //Encriptamos la nueva contraseña
+                            string nuevacontraencript = Seguridad.Encriptar(newpassword);
+                            encrip.Contraencript = contradesencrit;
+                            MessageBox.Show("Contraseña Actualizada con exito");
+                            //Aun asi, no cambia la contraseña de la lista
+                        }
+                    }
                 }
                 else
                 {
-                    //MessageBox.Show("Las contraseñas no coinciden");
+                    MessageBox.Show("Las contraseñas no coinciden");
+                    limpiarcampos();
 
                 }
             } //Aqui
+        }
+
+        private void limpiarcampos() //Este nos limpiara los campos y quedará listo para escribir en los textbox
+        {
+            txtactualpass.Clear();
+            txtnewpassword.Clear();
+            txtconfirmpassword.Clear();
+            txtactualpass.Focus();
         }
 
         private void button1_Click_1(object sender, EventArgs e)

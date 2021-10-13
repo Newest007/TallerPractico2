@@ -27,15 +27,6 @@ namespace ventasExpress
         {
             InitializeComponent();
             
-            
-
-            //Procedemos a encriptar los datos a travez de un ciclo 
-
-            foreach (Datos d in data)
-            {
-                //Guardamos los datos ya encriptados en su correspondiente lista
-                encriptado.Add(new Encriptado {Usuarioencript = d.Cuenta, Contraencript = Seguridad.Encriptar(d.Contraseña)});
-            }
         }
 
         private void Frmlogin_Load(object sender, EventArgs e)
@@ -73,10 +64,7 @@ namespace ventasExpress
                         menu.label26.Text = usuario;
 
                     }
-
                 }
-
-                //MessageBox.Show("Error, Usuario o Contraseña incorrectos", "Error de inicio de sesión");
                 
                 limpiar(); //Limpiamos los textbox y dejamos ya listo para escribir en el espacio para el usuario
 

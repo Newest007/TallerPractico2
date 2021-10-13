@@ -121,7 +121,7 @@
             this.txtlogincontra.Name = "txtlogincontra";
             this.txtlogincontra.PasswordChar = '*';
             this.txtlogincontra.Size = new System.Drawing.Size(137, 29);
-            this.txtlogincontra.TabIndex = 5;
+            this.txtlogincontra.TabIndex = 7;
             // 
             // txtloginusuario
             // 
@@ -141,7 +141,7 @@
             this.btnacceder.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnacceder.Name = "btnacceder";
             this.btnacceder.Size = new System.Drawing.Size(154, 51);
-            this.btnacceder.TabIndex = 7;
+            this.btnacceder.TabIndex = 8;
             this.btnacceder.Text = "Iniciar sesión";
             this.btnacceder.UseVisualStyleBackColor = false;
             this.btnacceder.Click += new System.EventHandler(this.btnacceder_Click);
