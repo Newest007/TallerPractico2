@@ -6,15 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace ventasExpress
 {
+
     public partial class Frmlogin : ventasExpress.FrmBase
     {
-        //Creamos la lista de la clase Usuario para almacenar todos los que ingresen
-        private List<Datos> data = new List<Datos>();
-        private List<Encriptado> encriptado = new List<Encriptado>(); //Aqui se guardarán los datos ya encriptados
+        
 
         private void limpiar()
         {
@@ -26,10 +26,8 @@ namespace ventasExpress
         public Frmlogin()
         {
             InitializeComponent();
-            //Agregamos los datos a la lista "Usuarios"
-            data.Add(new Datos { Cuenta = "admin", Contraseña = "admin123" });
-            data.Add(new Datos { Cuenta = "vendedor", Contraseña = "Vendedor123" });
-            data.Add(new Datos { Cuenta = "Invitado", Contraseña = "invitadoinvitado123" });
+            
+            
 
             //Procedemos a encriptar los datos a travez de un ciclo 
 
@@ -83,6 +81,11 @@ namespace ventasExpress
                 limpiar(); //Limpiamos los textbox y dejamos ya listo para escribir en el espacio para el usuario
 
             }
+        }
+
+        private void Frmlogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

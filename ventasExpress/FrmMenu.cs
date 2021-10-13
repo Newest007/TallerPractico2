@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 using System.IO;
 
 namespace ventasExpress
@@ -360,6 +361,69 @@ namespace ventasExpress
             DtgvFactura.Visible = false;
 
             Facturas.Clear();
+        }
+
+        public void btnchagepassword_Click(object sender, EventArgs e)
+        {
+            int pos = 0;
+            string desencriptado;
+            //MessageBox.Show("Las contraseñas coincides");
+            int[] numeros = new int[] { 1, 2, 3 };
+            foreach (Encriptado prueba in encriptado)
+            {
+                MessageBox.Show("LLega al froeach");
+                
+                
+            }
+
+            //Definimos las variables en las que se depositará la contraseña actual y la nueva
+            string actualpassword;
+            string newpassword;
+            string confirmpassword;
+           
+
+            //Asignamos el origen de los datos que llenarán las variables creadas anteriormente
+            actualpassword = txtactualpass.Text;
+            newpassword = txtnewpassword.Text;
+            confirmpassword = txtconfirmpassword.Text;
+
+
+
+            //Creamos las soluciones para los casos que pueden ocurrir
+            if (txtactualpass.Text == "" || txtnewpassword.Text == "" || txtconfirmpassword.Text == "")
+            {
+                MessageBox.Show("Debe de llenar todos campos para poder cambiar su contraseña n/Intente de nuevo");
+                //limpiamos los espacios 
+            }
+            else
+            {
+                //Confirmamos que tanto la nueva contraseña como la coonfirmación de esta coincidad
+                if (txtnewpassword.Text == txtconfirmpassword.Text)
+                {
+
+
+                    /*int pos = 0;
+                    string desencriptado;
+                    //MessageBox.Show("Las contraseñas coincides");
+                    foreach (Datos dat in data)
+                    {
+                        MessageBox.Show(dat.Cuenta);
+                        MessageBox.Show("LLega al froeach");
+                    }*/
+                }
+                else
+                {
+                    //MessageBox.Show("Las contraseñas no coinciden");
+
+                }
+            } //Aqui
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Frmlogin login = new Frmlogin();
+            login.Show();
+            this.Hide();
         }
     }
 }

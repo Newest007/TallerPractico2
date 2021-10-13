@@ -37,8 +37,6 @@
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.btncomprar = new System.Windows.Forms.Button();
-            this.btnnewcompra = new System.Windows.Forms.Button();
-            this.DtgvFactura = new System.Windows.Forms.DataGridView();
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
@@ -72,6 +70,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.DtgvFactura = new System.Windows.Forms.DataGridView();
+            this.btnnewcompra = new System.Windows.Forms.Button();
             this.Consultstorage = new System.Windows.Forms.TabPage();
             this.btnacceder = new System.Windows.Forms.Button();
             this.Dgvproductos = new System.Windows.Forms.DataGridView();
@@ -79,6 +79,16 @@
             this.btnbuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnchagepassword = new System.Windows.Forms.Button();
+            this.txtconfirmpassword = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.txtnewpassword = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.txtactualpass = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
@@ -88,6 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DtgvFactura)).BeginInit();
             this.Consultstorage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgvproductos)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnsalir
@@ -97,10 +108,16 @@
             this.btnsalir.Size = new System.Drawing.Size(85, 46);
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
+            // lbl1
+            // 
+            this.lbl1.Size = new System.Drawing.Size(0, 33);
+            this.lbl1.Text = "";
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.NuevaVenta);
             this.tabControl1.Controls.Add(this.Consultstorage);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(10, 53);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tabControl1.Name = "tabControl1";
@@ -224,28 +241,6 @@
             this.btncomprar.Text = "Comprar";
             this.btncomprar.UseVisualStyleBackColor = true;
             this.btncomprar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnnewcompra
-            // 
-            this.btnnewcompra.Location = new System.Drawing.Point(248, 535);
-            this.btnnewcompra.Name = "btnnewcompra";
-            this.btnnewcompra.Size = new System.Drawing.Size(156, 40);
-            this.btnnewcompra.TabIndex = 54;
-            this.btnnewcompra.Text = "Nueva Compra";
-            this.btnnewcompra.UseVisualStyleBackColor = true;
-            this.btnnewcompra.Visible = false;
-            this.btnnewcompra.Click += new System.EventHandler(this.btnnewcompra_Click);
-            // 
-            // DtgvFactura
-            // 
-            this.DtgvFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DtgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtgvFactura.Location = new System.Drawing.Point(53, 370);
-            this.DtgvFactura.Name = "DtgvFactura";
-            this.DtgvFactura.Size = new System.Drawing.Size(612, 159);
-            this.DtgvFactura.TabIndex = 53;
-            this.DtgvFactura.Visible = false;
-            this.DtgvFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgvFactura_CellContentClick);
             // 
             // label38
             // 
@@ -578,6 +573,28 @@
             this.label13.TabIndex = 13;
             this.label13.Text = "Código";
             // 
+            // DtgvFactura
+            // 
+            this.DtgvFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DtgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgvFactura.Location = new System.Drawing.Point(53, 370);
+            this.DtgvFactura.Name = "DtgvFactura";
+            this.DtgvFactura.Size = new System.Drawing.Size(612, 159);
+            this.DtgvFactura.TabIndex = 53;
+            this.DtgvFactura.Visible = false;
+            this.DtgvFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgvFactura_CellContentClick);
+            // 
+            // btnnewcompra
+            // 
+            this.btnnewcompra.Location = new System.Drawing.Point(248, 535);
+            this.btnnewcompra.Name = "btnnewcompra";
+            this.btnnewcompra.Size = new System.Drawing.Size(156, 40);
+            this.btnnewcompra.TabIndex = 54;
+            this.btnnewcompra.Text = "Nueva Compra";
+            this.btnnewcompra.UseVisualStyleBackColor = true;
+            this.btnnewcompra.Visible = false;
+            this.btnnewcompra.Click += new System.EventHandler(this.btnnewcompra_Click);
+            // 
             // Consultstorage
             // 
             this.Consultstorage.Controls.Add(this.btnacceder);
@@ -657,6 +674,103 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "*Introduzca el nombre o código del producto que desea consultar:";
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.btnchagepassword);
+            this.tabPage1.Controls.Add(this.txtconfirmpassword);
+            this.tabPage1.Controls.Add(this.label46);
+            this.tabPage1.Controls.Add(this.txtnewpassword);
+            this.tabPage1.Controls.Add(this.label45);
+            this.tabPage1.Controls.Add(this.txtactualpass);
+            this.tabPage1.Controls.Add(this.label44);
+            this.tabPage1.Controls.Add(this.label43);
+            this.tabPage1.Location = new System.Drawing.Point(4, 35);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(693, 604);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Cambiar contraseña";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(393, 491);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 45);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Regresar al login";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnchagepassword
+            // 
+            this.btnchagepassword.Location = new System.Drawing.Point(148, 493);
+            this.btnchagepassword.Name = "btnchagepassword";
+            this.btnchagepassword.Size = new System.Drawing.Size(190, 43);
+            this.btnchagepassword.TabIndex = 7;
+            this.btnchagepassword.Text = "Cambiar contraseña";
+            this.btnchagepassword.UseVisualStyleBackColor = true;
+            this.btnchagepassword.Click += new System.EventHandler(this.btnchagepassword_Click);
+            // 
+            // txtconfirmpassword
+            // 
+            this.txtconfirmpassword.Location = new System.Drawing.Point(49, 393);
+            this.txtconfirmpassword.Name = "txtconfirmpassword";
+            this.txtconfirmpassword.Size = new System.Drawing.Size(382, 34);
+            this.txtconfirmpassword.TabIndex = 6;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(44, 340);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(243, 26);
+            this.label46.TabIndex = 5;
+            this.label46.Text = "Confirme la nueva contraseña:";
+            // 
+            // txtnewpassword
+            // 
+            this.txtnewpassword.Location = new System.Drawing.Point(49, 255);
+            this.txtnewpassword.Name = "txtnewpassword";
+            this.txtnewpassword.Size = new System.Drawing.Size(382, 34);
+            this.txtnewpassword.TabIndex = 4;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(44, 213);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(228, 26);
+            this.label45.TabIndex = 3;
+            this.label45.Text = "Ingrese la nueva contraseña:";
+            // 
+            // txtactualpass
+            // 
+            this.txtactualpass.Location = new System.Drawing.Point(49, 137);
+            this.txtactualpass.Name = "txtactualpass";
+            this.txtactualpass.Size = new System.Drawing.Size(382, 34);
+            this.txtactualpass.TabIndex = 2;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(168, 20);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(390, 37);
+            this.label44.TabIndex = 1;
+            this.label44.Text = "Cambio de contraseña de la cuenta";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(44, 94);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(230, 26);
+            this.label43.TabIndex = 0;
+            this.label43.Text = "Ingrese la contraseña actual:";
+            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -701,6 +815,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMenu_FormClosed);
             this.Load += new System.EventHandler(this.FrmMenu_Load);
+            this.Controls.SetChildIndex(this.lbl1, 0);
+            this.Controls.SetChildIndex(this.lb2, 0);
+            this.Controls.SetChildIndex(this.lb3, 0);
+            this.Controls.SetChildIndex(this.btniniciar, 0);
             this.Controls.SetChildIndex(this.tabControl1, 0);
             this.Controls.SetChildIndex(this.btnsalir, 0);
             this.Controls.SetChildIndex(this.label25, 0);
@@ -715,6 +833,8 @@
             this.Consultstorage.ResumeLayout(false);
             this.Consultstorage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgvproductos)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -776,5 +896,15 @@
         private System.Windows.Forms.DataGridView DtgvFactura;
         private System.Windows.Forms.GroupBox gbxcomprar;
         private System.Windows.Forms.Button btnnewcompra;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button btnchagepassword;
+        private System.Windows.Forms.TextBox txtconfirmpassword;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox txtnewpassword;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox txtactualpass;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Button button1;
     }
 }

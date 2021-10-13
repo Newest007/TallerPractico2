@@ -45,6 +45,30 @@
             this.btnsalir.Margin = new System.Windows.Forms.Padding(8, 12, 8, 12);
             this.btnsalir.Size = new System.Drawing.Size(100, 42);
             // 
+            // lbl1
+            // 
+            this.lbl1.Location = new System.Drawing.Point(128, 218);
+            this.lbl1.Size = new System.Drawing.Size(0, 33);
+            this.lbl1.Text = "";
+            // 
+            // lb2
+            // 
+            this.lb2.Location = new System.Drawing.Point(12, 223);
+            this.lb2.Size = new System.Drawing.Size(0, 28);
+            this.lb2.Text = "";
+            // 
+            // lb3
+            // 
+            this.lb3.Location = new System.Drawing.Point(64, 233);
+            this.lb3.Size = new System.Drawing.Size(0, 28);
+            this.lb3.Text = "";
+            // 
+            // btniniciar
+            // 
+            this.btniniciar.Location = new System.Drawing.Point(266, 272);
+            this.btniniciar.Size = new System.Drawing.Size(10, 12);
+            this.btniniciar.Text = "";
+            // 
             // labelacceder
             // 
             this.labelacceder.AutoSize = true;
@@ -148,7 +172,12 @@
             this.Name = "Frmlogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Taller practico #2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frmlogin_FormClosed);
             this.Load += new System.EventHandler(this.Frmlogin_Load);
+            this.Controls.SetChildIndex(this.btniniciar, 0);
+            this.Controls.SetChildIndex(this.lbl1, 0);
+            this.Controls.SetChildIndex(this.lb2, 0);
+            this.Controls.SetChildIndex(this.lb3, 0);
             this.Controls.SetChildIndex(this.btnsalir, 0);
             this.Controls.SetChildIndex(this.labelacceder, 0);
             this.Controls.SetChildIndex(this.label1, 0);
