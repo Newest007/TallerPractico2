@@ -137,7 +137,7 @@
             this.btnacceder.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.btnacceder.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnacceder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnacceder.Location = new System.Drawing.Point(196, 249);
+            this.btnacceder.Location = new System.Drawing.Point(202, 249);
             this.btnacceder.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnacceder.Name = "btnacceder";
             this.btnacceder.Size = new System.Drawing.Size(154, 51);
