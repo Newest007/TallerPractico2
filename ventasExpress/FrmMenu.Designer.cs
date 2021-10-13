@@ -80,6 +80,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnchagepassword = new System.Windows.Forms.Button();
             this.txtconfirmpassword = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
@@ -91,7 +92,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.NuevaVenta.SuspendLayout();
             this.gbxcomprar.SuspendLayout();
@@ -107,6 +107,11 @@
             this.btnsalir.Margin = new System.Windows.Forms.Padding(8, 12, 8, 12);
             this.btnsalir.Size = new System.Drawing.Size(85, 46);
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
+            // lbl1
+            // 
+            this.lbl1.Size = new System.Drawing.Size(0, 33);
+            this.lbl1.Text = "";
             // 
             // tabControl1
             // 
@@ -688,6 +693,16 @@
             this.tabPage1.Text = "Cambiar contraseña";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(393, 491);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 45);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Regresar al login";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // btnchagepassword
             // 
             this.btnchagepassword.Location = new System.Drawing.Point(148, 493);
@@ -786,16 +801,6 @@
             this.label39.TabIndex = 6;
             this.label39.Text = "¿Que desea realizar?";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(393, 491);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 45);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Regresar al login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 26F);
@@ -810,6 +815,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMenu_FormClosed);
             this.Load += new System.EventHandler(this.FrmMenu_Load);
+            this.Controls.SetChildIndex(this.lbl1, 0);
+            this.Controls.SetChildIndex(this.lb2, 0);
+            this.Controls.SetChildIndex(this.lb3, 0);
+            this.Controls.SetChildIndex(this.btniniciar, 0);
             this.Controls.SetChildIndex(this.tabControl1, 0);
             this.Controls.SetChildIndex(this.btnsalir, 0);
             this.Controls.SetChildIndex(this.label25, 0);

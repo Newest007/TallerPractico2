@@ -35,5 +35,18 @@ namespace ventasExpress
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Frmlogin login = new Frmlogin();
+            login.Show();
+            this.Hide();
+
+        }
+
+        private void FrmBase_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

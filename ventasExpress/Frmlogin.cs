@@ -82,5 +82,10 @@ namespace ventasExpress
 
             }
         }
+
+        private void Frmlogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
