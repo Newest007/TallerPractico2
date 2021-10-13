@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
+
 
 namespace ventasExpress
 {
-    class Datos
+    public class Datos
     {
         protected string cuenta; //Va a ser la variable que almacenará al usuario
         protected string contraseña;
