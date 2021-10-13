@@ -716,7 +716,9 @@
             // txtconfirmpassword
             // 
             this.txtconfirmpassword.Location = new System.Drawing.Point(49, 393);
+            this.txtconfirmpassword.MaxLength = 10;
             this.txtconfirmpassword.Name = "txtconfirmpassword";
+            this.txtconfirmpassword.PasswordChar = '*';
             this.txtconfirmpassword.Size = new System.Drawing.Size(382, 34);
             this.txtconfirmpassword.TabIndex = 6;
             // 
@@ -732,7 +734,9 @@
             // txtnewpassword
             // 
             this.txtnewpassword.Location = new System.Drawing.Point(49, 255);
+            this.txtnewpassword.MaxLength = 10;
             this.txtnewpassword.Name = "txtnewpassword";
+            this.txtnewpassword.PasswordChar = '*';
             this.txtnewpassword.Size = new System.Drawing.Size(382, 34);
             this.txtnewpassword.TabIndex = 4;
             // 
@@ -748,7 +752,9 @@
             // txtactualpass
             // 
             this.txtactualpass.Location = new System.Drawing.Point(49, 137);
+            this.txtactualpass.MaxLength = 10;
             this.txtactualpass.Name = "txtactualpass";
+            this.txtactualpass.PasswordChar = '*';
             this.txtactualpass.Size = new System.Drawing.Size(382, 34);
             this.txtactualpass.TabIndex = 2;
             // 
@@ -812,7 +818,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(8, 12, 8, 12);
             this.Name = "FrmMenu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMenu_FormClosed);
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.Controls.SetChildIndex(this.lbl1, 0);
