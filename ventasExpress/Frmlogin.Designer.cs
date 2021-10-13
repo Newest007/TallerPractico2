@@ -41,7 +41,7 @@
             // 
             // btnsalir
             // 
-            this.btnsalir.Location = new System.Drawing.Point(400, 257);
+            this.btnsalir.Location = new System.Drawing.Point(384, 254);
             this.btnsalir.Margin = new System.Windows.Forms.Padding(8, 12, 8, 12);
             this.btnsalir.Size = new System.Drawing.Size(100, 42);
             // 
@@ -65,18 +65,18 @@
             // 
             // btniniciar
             // 
-            this.btniniciar.Location = new System.Drawing.Point(266, 272);
+            this.btniniciar.Location = new System.Drawing.Point(282, 275);
             this.btniniciar.Size = new System.Drawing.Size(10, 12);
             this.btniniciar.Text = "";
             // 
             // labelacceder
             // 
             this.labelacceder.AutoSize = true;
-            this.labelacceder.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelacceder.Location = new System.Drawing.Point(236, 9);
+            this.labelacceder.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelacceder.Location = new System.Drawing.Point(231, 9);
             this.labelacceder.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelacceder.Name = "labelacceder";
-            this.labelacceder.Size = new System.Drawing.Size(75, 28);
+            this.labelacceder.Size = new System.Drawing.Size(93, 33);
             this.labelacceder.TabIndex = 1;
             this.labelacceder.Text = "Acceder";
             // 
@@ -134,14 +134,16 @@
             // 
             // btnacceder
             // 
+            this.btnacceder.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.btnacceder.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnacceder.Location = new System.Drawing.Point(216, 257);
+            this.btnacceder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnacceder.Location = new System.Drawing.Point(196, 249);
             this.btnacceder.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnacceder.Name = "btnacceder";
-            this.btnacceder.Size = new System.Drawing.Size(118, 40);
+            this.btnacceder.Size = new System.Drawing.Size(154, 51);
             this.btnacceder.TabIndex = 7;
             this.btnacceder.Text = "Iniciar sesión";
-            this.btnacceder.UseVisualStyleBackColor = true;
+            this.btnacceder.UseVisualStyleBackColor = false;
             this.btnacceder.Click += new System.EventHandler(this.btnacceder_Click);
             // 
             // label4
@@ -170,7 +172,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(8, 12, 8, 12);
             this.Name = "Frmlogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Taller practico #2";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frmlogin_FormClosed);
             this.Load += new System.EventHandler(this.Frmlogin_Load);

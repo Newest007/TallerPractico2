@@ -301,9 +301,9 @@ namespace ventasExpress
                     MessageBox.Show("Se le ha aplicado un descuento del 3%, pase feliz día!", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
 
-                if(txtcomprar.Text.Contains("2.,1"))
+                if(txtcomprar.Text.Contains("2."))
                 {
-                    if(txtcomprar.Text.Contains("9.,1"))
+                    if(txtcomprar.Text.Contains("9."))
                     {
                         MessageBox.Show("Se le han añadido de manera gratuita una cantidad de 5 dulces, disfrutelos!", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         Facturas.Add(new Factura { TipoProducto = "Dulces", xCantProducto = 5, PrecioProducto = 0.0, PrecioTXProducto = 0.0 });
@@ -311,15 +311,7 @@ namespace ventasExpress
 
                 }
 
-                if (txtcomprar.Text.Contains("9.,1"))
-                {
-                    if (txtcomprar.Text.Contains("2.,1"))
-                    {
-                        MessageBox.Show("Se le han añadido de manera gratuita una cantidad de 5 dulces, disfrutelos!", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        Facturas.Add(new Factura { TipoProducto = "Dulces", xCantProducto = 5, PrecioProducto = 0.0, PrecioTXProducto = 0.0 });
-                    }
-
-                }
+                
 
             }
 

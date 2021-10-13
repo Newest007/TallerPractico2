@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBase));
             this.btnsalir = new System.Windows.Forms.Button();
             this.lbl1 = new System.Windows.Forms.Label();
             this.lb2 = new System.Windows.Forms.Label();
@@ -78,12 +79,14 @@
             // 
             // btniniciar
             // 
+            this.btniniciar.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btniniciar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btniniciar.Location = new System.Drawing.Point(124, 160);
             this.btniniciar.Name = "btniniciar";
             this.btniniciar.Size = new System.Drawing.Size(174, 49);
             this.btniniciar.TabIndex = 4;
             this.btniniciar.Text = "Iniciar Programa";
-            this.btniniciar.UseVisualStyleBackColor = true;
+            this.btniniciar.UseVisualStyleBackColor = false;
             this.btniniciar.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmBase
@@ -97,11 +100,11 @@
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.btnsalir);
             this.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "FrmBase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Taller Practico #2";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmBase_FormClosed);
             this.Load += new System.EventHandler(this.FrmBase_Load);
             this.ResumeLayout(false);
